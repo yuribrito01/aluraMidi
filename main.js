@@ -5,7 +5,7 @@ function tocaSom(idAudio){
     document.querySelector(idAudio).play();
 }
 const teclas = document.querySelectorAll('.tecla');
-const som = ['#som_tecla_pom', '#som_tecla_clap', '#som_tecla_tim','#som_tecla_puff','#som_tecla_splash','#som_tecla_toim','#som_tecla_psh','#som_tecla_tic','som_tecla_tom']
+const som = ['#som_tecla_pom', '#som_tecla_clap', '#som_tecla_tim','#som_tecla_puff','#som_tecla_splash','#som_tecla_toim','#som_tecla_psh','#som_tecla_tic','#som_tecla_tom']
 
 for(let atual =0; atual< teclas.length; atual ++){
     teclas[atual].onclick = function (){
@@ -13,5 +13,7 @@ for(let atual =0; atual< teclas.length; atual ++){
     }
 }
 
+//listaTeclas = teclas[atual].classList[1]
 
-
+// teclas[0].classList
+//faz uma lista dos atributos desse item do array.
