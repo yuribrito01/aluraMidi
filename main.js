@@ -11,6 +11,18 @@ for(let atual =0; atual< teclas.length; atual ++){
     teclas[atual].onclick = function (){
         tocaSom(som[atual]);
     }
+    //Colocando vermelho quando a tecla for pressionada
+    teclas[atual].onkeydown = function(evento){
+        
+    if(evento.code === 'Space'){
+        teclas[atual].classList.add('ativa');
+
+    }
+    }
+    //tirando o vermelho
+    teclas[atual].onkeyup = function(){
+        teclas[atual].classList.remove('ativa');
+    }
 }
 
 //listaTeclas = teclas[atual].classList[1]
