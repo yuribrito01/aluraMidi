@@ -1,9 +1,12 @@
 // document.querySelector('.tecla_pom');
 //document é usado para pegar um escopo do projeto inteiro. Já o querrySelector pega os dados da classe selecionada.
 
-function tocaSom(idAudio){
-    document.querySelector(idAudio).play();
+function tocaSom(idElemento){
+    const elemento = document.querySelector(idElemento);
+
+    elemento && elemento.localName === 'audio' ? elemento.play() : console.log('Elemento não encontrado');
 }
+
 const teclas = document.querySelectorAll('.tecla');
 const som = ['#som_tecla_pom', '#som_tecla_clap', '#som_tecla_tim','#som_tecla_puff','#som_tecla_splash','#som_tecla_toim','#som_tecla_psh','#som_tecla_tic','#som_tecla_tom']
 
@@ -14,7 +17,7 @@ for(let atual =0; atual< teclas.length; atual ++){
     //Colocando vermelho quando a tecla for pressionada
     teclas[atual].onkeydown = function(evento){
         
-    if(evento.code === 'Space'){
+    if(evento.code === 'Space' || evento.code === 'Enter'){
         teclas[atual].classList.add('ativa');
 
     }
